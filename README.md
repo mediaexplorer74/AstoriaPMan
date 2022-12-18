@@ -14,7 +14,7 @@ A simple Package Manager for Windows Phones running Astoria builds (10240 - 1057
 </tr></table>
 
 ## My 2 cents
-- Minimal code refacoring (a lot of line breaks only)
+- Minimal code refactoring (a lot of line breaks only)
 
 ## Requirements:
 
@@ -23,7 +23,6 @@ A simple Package Manager for Windows Phones running Astoria builds (10240 - 1057
   - Either from [WindOS Fone Guide](https://youtu.be/vP-z8jVXVBQ)
   - Manually create the Folder Junction (See FAQ)
 - [Apk2Appx](https://github.com/fadilfadz01/Apk2Appx_Converter) Converted Apps
-
 
 
 ## Features:
