@@ -9,6 +9,8 @@ A simple Package Manager for Windows Phones running Astoria builds (10240 - 1057
 <table><tr>
 <td> <img src="Images/shot1.png" alt="Drawing" style="width: 320px;"/> </td>
 <td> <img src="Images/shot2.png" alt="Drawing" style="width: 320px;"/> </td>
+</tr>
+<tr>
 <td> <img src="Images/shot3.png" alt="Drawing" style="width: 320px;"/> </td>
 <td> <img src="Images/shot4.png" alt="Drawing" style="width: 320px;"/> </td>
 </tr></table>
