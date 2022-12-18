@@ -154,6 +154,8 @@ namespace Astoria_Package_Manager
             }
             catch (Exception ex)
             {
+                Debug.WriteLine(ex.Message);
+
                 IsFirstRunComplete = false;
                 LoadFirstRun();
             }
@@ -351,8 +353,7 @@ namespace Astoria_Package_Manager
                 
                 AndroidAPIs.CheckPermissions(FoundPermissions);
                 
-                PackageInfo = $"\nPackage Name: {packageName.ToString()
-                    .Replace("package=", "").Replace("\"", "")}\nVersion: " +
+                PackageInfo = $"\nPackage Name: {packageName.ToString().Replace("package=", "").Replace("\"", "")}\nVersion: " +
                     $"{versionName.ToString().Replace("versionName=", "").Replace("\"", "")}\n" +
                     $"Minimum Build: {AndroidAPIs.minSDKLevel}\n" +
                     $"Target Build: {AndroidAPIs.targetSDKLevel}";
@@ -653,7 +654,7 @@ namespace Astoria_Package_Manager
                                     }
                                     catch (Exception ex)
                                     {
-
+                                        Debug.WriteLine(ex.Message);
                                         // GlobalStrings.Logger += $"Error with Archive {ex.Message}, {fileName}";
                                         //    log.Add(new ArchiverError(ex.Message, fileName));
                                     }
@@ -1153,12 +1154,12 @@ SaveManifest()
         {
             try
             {
-
                 // client.Logout();
             } catch (Exception ex)
             {
-
+                Debug.WriteLine(ex.Message);
             }
+
             OutputText.Text = "Browse the ProjectA Repo";
             GamesStack.Children.Clear();
             GamesStack.Visibility = Visibility.Collapsed;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,10 @@ namespace Phone_Helper
             {
                 return string.Format(new FileSizeFormatProvider(), "{0:fs}", l);
             }
-            catch (System.Exception e)
+            catch (System.Exception ex)
             {
+                Debug.WriteLine(ex.Message);
+
                 return "0 KB";
             }
         }
@@ -42,10 +45,11 @@ namespace Phone_Helper
                     return defaultFormat(format, arg, formatProvider);
                 }
             }
-            catch (System.Exception e)
+            catch (System.Exception ex)
             {
-
+                Debug.WriteLine(ex.Message);
             }
+
             if (arg is string)
             {
                 return defaultFormat(format, arg, formatProvider);
@@ -57,8 +61,10 @@ namespace Phone_Helper
             {
                 size = Convert.ToDecimal(arg);
             }
-            catch (System.Exception e)
+            catch (System.Exception ex)
             {
+                Debug.WriteLine(ex.Message);
+
                 return defaultFormat(format, arg, formatProvider);
             }
 
