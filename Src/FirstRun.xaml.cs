@@ -136,7 +136,11 @@ namespace Astoria_Package_Manager
                 CloseReadme.Visibility = Visibility.Visible;
                 ReadmeBox.Visibility = Visibility.Visible;
                 ReadmeBox.Text = "Fetching RREADME.txt from Github";
-                var readmecreate = await ApplicationData.Current.LocalFolder.CreateFileAsync("README.txt", CreationCollisionOption.ReplaceExisting);
+                
+                var readmecreate = await ApplicationData.Current.LocalFolder.CreateFileAsync(
+                    "README.txt", 
+                    CreationCollisionOption.ReplaceExisting);
+
                 downloadOperation = backgroundDownloader.CreateDownload(new Uri(readmeURL), readmecreate);
                 cancellationToken = new CancellationTokenSource();
                 await downloadOperation.StartAsync().AsTask(cancellationToken.Token);
@@ -147,14 +151,16 @@ namespace Astoria_Package_Manager
                 }
                 var text = await FileIO.ReadTextAsync(readmecreate);
                 ReadmeBox.Text = text;
-            } else
+            } 
+            else
             {
                 ExceptionHelper.Exceptions.CustomException("Please connect to the Internet to fetch latest Readme");
             }
-            
-            //ReadmeBox.Con
-        }
+             
+        }//
 
+
+        //
         private async void FinishSetup_Click(object sender, RoutedEventArgs e)
         {
             if(tokenforapp != "OBBData")

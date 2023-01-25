@@ -17,6 +17,7 @@ A simple Package Manager for Windows Phones running Astoria builds (10240 - 1057
 
 ## My 2 cents
 - Minimal code refactoring (a lot of line breaks only)
+- XAP installer integration (draft, my old Micro-Telnet project used)
 
 ## Requirements:
 
@@ -59,4 +60,4 @@ To manually create, open/connect to the Command Prompt, and type:
 ## ..
 As-is.
 
-- m.e. 2022
+- m.e. 2022--2023

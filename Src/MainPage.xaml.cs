@@ -1485,10 +1485,7 @@ SaveManifest()
             {
                 ExceptionHelper.Exceptions.CustomException("Please connect to the Internet to load ProjectA Repo");
             }
-        }
-
-
-       
+        }    
 
 
     }
